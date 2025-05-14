@@ -1,0 +1,319 @@
+/* Books page specific styles */
+
+/* Books collection layout */
+.books-collection {
+  padding: var(--space-4) var(--space-2) var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Filter styles */
+.book-filters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-2);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  color: var(--gray-700);
+}
+
+.filter-group select {
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  background-color: var(--white);
+  min-width: 200px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236d6d6d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-group {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-group input {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  padding-right: 2.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+}
+
+.search-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-500);
+  padding: 0.25rem;
+  transition: color var(--transition-fast);
+}
+
+.search-btn:hover {
+  color: var(--primary-color);
+}
+
+/* Enhanced book-card styles for the catalog */
+
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.book-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.book-cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.book-info {
+  padding: var(--space-2);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-1);
+}
+
+.author {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-1);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: var(--space-1) 0 var(--space-2);
+  font-size: 1.125rem;
+}
+
+.book-info .btn {
+  margin-top: auto;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+
+
+
+.book-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--border-radius-sm);
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+
+.bestseller {
+  background-color: var(--accent-color);
+}
+
+.new {
+  background-color: var(--primary-color);
+}
+
+.sale {
+  background-color: var(--error-color);
+}
+
+.genre {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-bottom: var(--space-1);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--gray-500);
+  margin-right: var(--space-1);
+  font-weight: 400;
+}
+
+/* Pagination */
+.pagination {
+  margin: var(--space-5) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.pagination li a,
+.pagination-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border-radius: var(--border-radius-md);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  transition: all var(--transition-fast);
+}
+
+.pagination li a:hover,
+.pagination-arrow:hover {
+  background-color: var(--gray-100);
+  color: var(--primary-color);
+  border-color: var(--gray-300);
+}
+
+.pagination li a.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.pagination .ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  color: var(--gray-600);
+}
+
+.pagination-arrow {
+  margin: 0 0.5rem;
+}
+
+.pagination-arrow svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group,
+  .search-group {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .filter-group select {
+    width: 100%;
+    min-width: 0;
+  }
+  
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  .book-info h3 {
+    font-size: 1rem;
+  }
+  
+  .pagination ul {
+    gap: 0.25rem;
+  }
+  
+  .pagination li a,
+  .pagination-arrow {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

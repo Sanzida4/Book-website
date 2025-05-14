@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luminary Books | Our Collection</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/books.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">Luminary Books</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html" class="active">Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="mobile-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div> -->
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Our Collection</h1>
+      <p>Discover our carefully curated selection of literary treasures</p>
+    </section>
+
+    <section class="book-filters">
+      <div class="filter-container">
+        <div class="filter-group">
+          <label for="genre">Genre</label>
+          <select id="genre">
+            <option value="all">All Genres</option>
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="sci-fi">Science Fiction</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="mystery">Mystery</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="sort">Sort By</label>
+          <select id="sort">
+            <option value="newest">Newest Arrivals</option>
+            <option value="bestselling">Bestselling</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <input type="text" placeholder="Search books...">
+          <button type="button" class="search-btn">
+            <span class="sr-only">Search</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="books-collection">
+      <div class="book-grid">
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/1005324/literature-book-open-pages-1005324.jpeg" alt="The Midnight Library">
+            <div class="book-badge bestseller">Bestseller</div>
+          </div>
+          <div class="book-info">
+            <h3>The Midnight Library</h3>
+            <p class="author">Matt Haig</p>
+            <p class="genre">Fiction</p>
+            <p class="price">$22.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg" alt="The Song of Achilles">
+          </div>
+          <div class="book-info">
+            <h3>The Song of Achilles</h3>
+            <p class="author">Madeline Miller</p>
+            <p class="genre">Fiction, Historical</p>
+            <p class="price">$17.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/3747139/pexels-photo-3747139.jpeg" alt="Klara and the Sun">
+            <div class="book-badge new">New</div>
+          </div>
+          <div class="book-info">
+            <h3>Klara and the Sun</h3>
+            <p class="author">Kazuo Ishiguro</p>
+            <p class="genre">Science Fiction</p>
+            <p class="price">$25.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg" alt="The Invisible Life of Addie LaRue">
+          </div>
+          <div class="book-info">
+            <h3>The Invisible Life of Addie LaRue</h3>
+            <p class="author">V.E. Schwab</p>
+            <p class="genre">Fantasy</p>
+            <p class="price">$24.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/2099266/pexels-photo-2099266.jpeg" alt="The Four Winds">
+          </div>
+          <div class="book-info">
+            <h3>The Four Winds</h3>
+            <p class="author">Kristin Hannah</p>
+            <p class="genre">Historical Fiction</p>
+            <p class="price">$27.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/4170629/pexels-photo-4170629.jpeg" alt="Project Hail Mary">
+            <div class="book-badge bestseller">Bestseller</div>
+          </div>
+          <div class="book-info">
+            <h3>Project Hail Mary</h3>
+            <p class="author">Andy Weir</p>
+            <p class="genre">Science Fiction</p>
+            <p class="price">$26.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg" alt="The Last Thing He Told Me">
+          </div>
+          <div class="book-info">
+            <h3>The Last Thing He Told Me</h3>
+            <p class="author">Laura Dave</p>
+            <p class="genre">Mystery, Thriller</p>
+            <p class="price">$23.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg" alt="The Vanishing Half">
+            <div class="book-badge sale">Sale</div>
+          </div>
+          <div class="book-info">
+            <h3>The Vanishing Half</h3>
+            <p class="author">Brit Bennett</p>
+            <p class="genre">Fiction</p>
+            <p class="price"><span class="original-price">$27.99</span> $19.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+         <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg" alt="The Song of Achilles">
+          </div>
+          <div class="book-info">
+            <h3>The Song of Achilles</h3>
+            <p class="author">Madeline Miller</p>
+            <p class="genre">Fiction, Historical</p>
+            <p class="price">$17.99</p>
+            <a href="#" class="btn secondary-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pagination">
+      <a href="#" class="pagination-arrow prev" aria-label="Previous page">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+        </svg>
+      </a>
+      <ul>
+        <li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><span class="ellipsis">...</span></li>
+        <li><a href="#">8</a></li>
+      </ul>
+      <a href="#" class="pagination-arrow next" aria-label="Next page">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" fill="currentColor"/>
+        </svg>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Luminary Books</h3>
+        <p>Curating extraordinary literary experiences since 2010.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Visit Us</h4>
+        <address>
+              Book Avenue<br>
+              Bogura<br>
+              Rajshahi Bangladesh<br>
+          <a href="tel:+12125555915">+8801954845915</a><br>
+          <a href="mailto:info@luminarybooks.com">info@luminarybooks.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Sanjida. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- <script>
+    // Simple mobile navigation toggle
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script> -->
+</body>
+</html>

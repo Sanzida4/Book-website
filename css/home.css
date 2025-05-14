@@ -1,0 +1,256 @@
+/* Home page specific styles */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(26, 38, 57, 0.8), rgba(26, 38, 57, 0.9)), 
+              url('https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--white);
+  padding: var(--space-7) var(--space-2);
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  margin-bottom: var(--space-2);
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--gray-200);
+  margin-bottom: var(--space-4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .btn {
+  font-size: 1.125rem;
+  padding: 0.875rem 2rem;
+}
+
+/* Featured Books Section */
+.featured-books {
+  padding: var(--space-6) var(--space-2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-books h2 {
+  text-align: center;
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.featured-books h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: var(--space-1) auto 0;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.book-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.book-cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.book-info {
+  padding: var(--space-2);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-1);
+}
+
+.author {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-1);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: var(--space-1) 0 var(--space-2);
+  font-size: 1.125rem;
+}
+
+.book-info .btn {
+  margin-top: auto;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+/* Quote Section */
+.quote-section {
+  background-color: var(--gray-100);
+  padding: var(--space-6) var(--space-2);
+  text-align: center;
+}
+
+blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  line-height: 1.4;
+  position: relative;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '"';
+  font-size: 4rem;
+  color: var(--secondary-color);
+  opacity: 0.3;
+  position: absolute;
+}
+
+blockquote::before {
+  top: -2rem;
+  left: -2rem;
+}
+
+blockquote::after {
+  bottom: -4rem;
+  right: -2rem;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-top: var(--space-2);
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: var(--white);
+  padding: var(--space-6) var(--space-2);
+  text-align: center;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  color: var(--white);
+}
+
+.newsletter p {
+  color: var(--gray-200);
+  margin-bottom: var(--space-3);
+}
+
+/* Responsive styles for home page */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+  
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  blockquote {
+    font-size: 1.25rem;
+  }
+  
+  blockquote::before,
+  blockquote::after {
+    font-size: 3rem;
+  }
+  
+  blockquote::before {
+    top: -1.5rem;
+    left: -1rem;
+  }
+  
+  blockquote::after {
+    bottom: -3rem;
+    right: -1rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form button {
+    width: 100%;
+    margin-top: var(--space-1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+}

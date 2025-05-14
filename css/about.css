@@ -1,0 +1,277 @@
+/* About page specific styles */
+
+/* About intro section */
+.about-intro {
+  padding: var(--space-6) var(--space-2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.about-image:hover img {
+  transform: scale(1.03);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content p {
+  margin-bottom: var(--space-2);
+  line-height: 1.7;
+}
+
+/* Mission section */
+.mission {
+  background-color: var(--gray-100);
+  padding: var(--space-6) var(--space-2);
+}
+
+.mission-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-content p {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto var(--space-4);
+  line-height: 1.7;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  text-align: left;
+}
+
+.value-item {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--secondary-color);
+}
+
+.value-item h3 {
+  color: var(--accent-color);
+  margin-bottom: var(--space-1);
+}
+
+/* Team section */
+.team {
+  padding: var(--space-6) var(--space-2);
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team h2 {
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.team h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: var(--space-1) auto 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.team-member {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.member-image {
+  overflow: hidden;
+  height: 250px;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.team-member h3 {
+  margin: var(--space-2) var(--space-2) var(--space-1);
+  font-size: 1.25rem;
+}
+
+.member-title {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin: 0 var(--space-2) var(--space-1);
+}
+
+.team-member p:not(.member-title) {
+  margin: 0 var(--space-2) var(--space-2);
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+/* Testimonials section */
+.testimonials {
+  background-color: var(--gray-100);
+  padding: var(--space-6) var(--space-2);
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.testimonials h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: var(--space-1) auto 0;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-3);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  text-align: left;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.testimonial p {
+  margin: var(--space-2) 0;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  text-align: right;
+  margin-top: var(--space-2);
+}
+
+.testimonial-author p {
+  font-style: normal;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Join us section */
+.join-us {
+  background: linear-gradient(rgba(26, 38, 57, 0.9), rgba(26, 38, 57, 0.9)), 
+              url('https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: var(--space-6) var(--space-2);
+  text-align: center;
+}
+
+.join-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.join-us h2 {
+  color: var(--white);
+}
+
+.join-us p {
+  color: var(--gray-200);
+  margin-bottom: var(--space-3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    margin-bottom: var(--space-3);
+  }
+  
+  .mission-content p {
+    font-size: 1rem;
+  }
+  
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonial-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
